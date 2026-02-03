@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Maphean</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"> </script>
+  <script src="script.js" defer></script><!-- run after page loads -->
+</head>
+
+<body id="body">
+  <!-- buttons -->
+  <button id="home"> <img src="images/home.png" id="homeimg" /></button>
+
+  <button id="gacha" class="menu"> <img src="images/diceHead.png" /></button>
+  <center>
+
+    <h1> Maphean </h1>
+    <br>
+
+    <div id="overlay" onclick="closePopup()"></div>
+
+    <div id="popup-container">
+      <h3>-OVERVIEW-</h3>
+      <p>Welcome to Maphean - a game that integrates fighting and gambling. Once players have loaded into the game, they can get characters by using the gacha option. Once they have a character they are satisfied with, they can use them to enter the Colosseum! To win, you will have to beat all the opponents that stand before you in turn-based combat and become the champion! If you lose, do not fret; you can always try again!</p>
+
+      <br>
+
+      <h3>-CHARACTER-</h3>
+      <p>To choose a character, click the button in the top right corner. This will bring you to the Gacha page where you can roll for a specific character. Here are the rates:</p>
+      <p>S tier characters: 5% chance (Gojo, Mumen Rider)<br>A tier characters: 10% chance (Zoro, Saber, Ichigo)<br>B tier characters: 35% chance (Eren, Hisoka, Erza)<br>C tier characters: 50% chance (Roy Mustang, Sogeking, Megumin)</p>
+
+      <br>
+
+      <h3>-BATTLE-</h3>
+      <p>Once you have picked a character, you can now step into the arena! The fight is turn-based, and you start first. There are two options to pick during your turn: Attack and Parry.</p>
+      <p>Attack: Has a chance to deal damage equal to your ATK at a chance of your HIT%.<br>Parry: Has a chance to block your opponent's incoming damage for your own ATK and also sets it to your turn again. Note, though, that parry takes account on both your PARRY% and the opponent's HIT%, and the chance will be much lower. Once you have beaten all opponents, you will be able to see the ending...</p>
+      <button id="close-btn">Close</button>
+    </div>
+
+
+    <!-- battle -->
+    <img src="images/vs.png" style="display: none;"class="battleImages">
+    <br>
+    <br>
+    <br>
+    <br>
+    <button id="battle" class="menu"> <img src="images/cross_swords.png" /></button>
+    
+    <button id="attack" class="battle" style="display: none;">
+      <img src="images/attack2.png" id="attackimg"/>
+      <h3>Attack</h3>
+    </button>
+    
+    <button id="parry" class="battle" style="display: none;">
+      <img src="images/parry.png" id="parryimg" />
+      <h3>Parry</h3>
+    </button>
+    <button id="ability" style="display: none;"><img src="images/ability.png" id="abilityimg" /> </button> <!-- not implemented -->
+
+
+    
+    <!-- gacha -->
+    <button id="single" class="gacha" style="display: none;"><img src="images/Wish.png" id="wish" /></button>
+
+
+    <!-- status text stuff -->
+    <h2 id='actionText'>...</h2>
+    <h2 id="currentCharacter" class="stats"></h2>
+    <h2 class="stats">Current Stats:</h2>
+    <h2 id="currentStats" class="stats"></h2>
+
+    <h2 class='opponentStats' style="display: none;">VS </h2>
+
+    <h2 id="opponent" class="opponentStats" style="display: none;">></h2>
+    <h2 class="opponentStats" style="display: none;">Oppenent Stats:</h2>
+    <h2 id="currentOpponentStats" class="opponentStats" style="display: none;"></h2>
+
+    <br>
+    <br>
+    <br>
+    <div id="characterPicture" style="display: none;" class="battleImages"></div>
+    <div id="opponentPicture" style="display: none;" class="battleImages"></div>
+    <div id="gachaPicture"></div>
+  </center>
+</body>
+
+</html>

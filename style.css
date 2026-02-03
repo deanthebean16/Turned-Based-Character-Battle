@@ -1,0 +1,270 @@
+/* 
+  Dean Cheng, Matthew Chow, Stephen Chen
+  11/8/2023 - 11/10/2023
+  TEJ3MProgramming Project
+  This is the style sheet for our programming project
+*/
+
+/* font */
+@font-face {
+  font-family: "Tsuki";
+  src: url('fonts/NineTsukiRegular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Genshin";
+  /* 💀 */
+  src: url('fonts/genshin.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: "Smash";
+  src: url('fonts/smash.ttf') format('truetype');
+}
+
+/* Image sizes */
+img {
+  height: 200px;
+  width: 200px;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Main Title */
+h1 {
+  position: relative;
+  bottom: 100px;
+  color: gold;
+  font-family: "Tsuki";
+  text-shadow: 5px 5px 5px #000000;
+  font-size: 10em;
+  display: inline;
+
+}
+
+/* Main Text */
+body {
+  font-family: "Genshin";
+  background-image: url('images/main_page.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-attachment: fixed;
+  background-position: center;
+  color: white;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+
+/* Button Text */
+
+h3 {
+  font-family: "Genshin";
+  color: white;
+  text-shadow: -2px 0 black, 0 2px black, 2px 0 black, 0 -2px black;
+}
+
+
+/* Buttons */
+
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+/*Gambling button 🤑*/
+#single {
+  border: transparent;
+  background-color: transparent;
+}
+
+/*Gambling button 🤑 IMAGE */
+#wish {
+  height: 100px;
+  width: 100px;
+}
+
+#single:hover {
+  transform: scale(1.2);
+}
+
+/* Battle Button */
+#battle {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: transparent;
+  background-color: transparent;
+}
+
+#battle:hover {
+  transform: scale(1.1);
+}
+
+/* Home button */
+#home {
+  position: relative;
+  bottom: 5vh;
+  border: transparent;
+  background-color: transparent;
+
+}
+
+#homeimg {
+  height: 150px;
+  width: 150px;
+}
+
+#home:hover {
+  transform: scale(1.1);
+}
+
+/* Shop Button*/
+#gacha {
+  position: relative;
+  top: 1vh;
+  left: 78vw;
+  border: transparent;
+  background-color: transparent;
+}
+
+#gacha:hover {
+  transform: scale(1.1);
+}
+
+/*Attack Button */
+#attack {
+  background-color: transparent;
+  border: transparent;
+  height: 15%;
+}
+
+#attack:hover {
+  transform: scale(1.1);
+}
+
+#attackimg {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* Parry Button*/
+#parry {
+  background-color: transparent;
+  border: transparent;
+  height: 15%;
+}
+
+#parry:hover {
+  transform: scale(1.1);
+}
+
+#parryimg {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+/* Ability Button*/
+
+#ability {
+  background-color: transparent;
+  border: transparent;
+}
+
+#ability:hover {
+  transform: scale(1.1);
+}
+
+#abilityimg {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+}
+
+/*y dont just grab one of those buttons from the internet fr imma do my own thing and we not allowed to thats just stealing coding is stealing*/
+
+.hp {
+  color: red;
+  font-weight: bold;
+}
+
+.atk {
+  color: blue;
+  font-weight: bold;
+}
+
+.hit {
+  color: green;
+  font-weight: bold;
+}
+
+.parry {
+  color: orange;
+  font-weight: bold;
+}
+
+
+#actionText {
+  font-family: "Smash";
+  color: red;
+  text-shadow: -2px 0 yellow, 0 2px yellow, 2px 0 yellow, 0 -2px yellow;
+}
+
+
+#popup-container {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #000000;
+  border: 2px solid #ffffff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 0;
+}
+
+#characterPicture {
+  display: inline-block;
+  position: relative;
+  right: 30vw;
+  bottom: 120vh;
+  background-color: transparent;
+}
+
+#opponentPicture {
+  display: inline-block;
+  position: relative;
+  left: 30vw;
+  bottom: 170vh;
+  background-color: transparent;
+}
+
+.character-image {
+  height: 80%;
+  width: 60%;
+  display: block;
+}
+
+.character-gacha {
+  height: 50%;
+  width: 50%;
+}
+
+#gachaPicture {
+  position: relative;
+  left: 30vw;
+  border: transparent;
+  background-color: transparent;
+}
